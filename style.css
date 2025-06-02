@@ -1,0 +1,357 @@
+body {
+    background-color: #121212; /* Slightly darker base */
+    color: #E0E0E0; /* Softer white for text */
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    padding-top: 70px; /* Adjusted for fixed navbar */
+}
+
+.navbar {
+    background-color: rgba(20, 20, 20, 0.85); /* Darker, more transparent */
+    backdrop-filter: blur(10px); /* Stronger blur */
+    border-bottom: 1px solid #333; /* Subtle separator */
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+.navbar-brand {
+    font-family: 'Playfair Display', serif; /* More elegant for brand */
+    font-size: 1.5rem;
+}
+
+.nav-link:hover, 
+.nav-link.active, 
+.dropdown-item:hover,
+.dropdown-item.active {
+    color: #D4AF37 !important; /* Gold accent for hover/active */
+}
+
+.dropdown-menu {
+    background-color: #1C1C1C; /* Dark dropdown */
+    border: 1px solid #333;
+    border-radius: 0.5rem; /* Slightly rounded */
+}
+
+.dropdown-item {
+    color: #E0E0E0;
+    padding: 0.5rem 1rem;
+}
+
+.hero-section {
+    background: url('https://images.unsplash.com/photo-1547573854-74d2a71cf062?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlbmNoJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+    height: 90vh; /* Slightly less than full viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-bottom: 2px solid #D4AF37;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.title-font {
+    font-family: 'Playfair Display', serif;
+    color: #FFFFFF;
+}
+
+.page-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #E0E0E0;
+}
+
+.card {
+    background-color: #1E1E1E; /* Darker card */
+    border: 1px solid #333;
+    color: #E0E0E0;
+    border-radius: 0.5rem; /* Rounded cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* For image zoom effect if desired */
+}
+
+.recipe-card:hover {
+    transform: translateY(-12px) scale(1.02); /* More pronounced hover */
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15); /* Subtle gold shadow */
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures image covers space nicely */
+    transition: transform 0.3s ease;
+}
+.recipe-card:hover .card-img-top {
+    transform: scale(1.05); /* Slight zoom on image hover */
+}
+.card-title {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+}
+
+.filter-list {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.filter-btn {
+    background-color: transparent;
+    color: #C4A484; /* Using existing accent for consistency */
+    border: 2px solid #C4A484;
+    margin: 0.5rem;
+    padding: 0.6rem 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 50px; /* Pill-shaped buttons */
+}
+
+.filter-btn:hover, .filter-btn.active-filter {
+    background-color: #C4A484;
+    color: #121212;
+    transform: translateY(-2px);
+}
+
+.text-effect {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-effect:hover {
+    color: #D4AF37 !important; /* Gold accent */
+    transform: scale(1.03);
+}
+
+.accordion-item {
+    background-color: #1E1E1E;
+    border: 1px solid #333;
+    margin-bottom: 0.5rem; /* Space between items */
+    border-radius: 0.3rem;
+}
+
+.accordion-button {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #D4AF37;
+    color: #121212;
+}
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #D4AF37;
+}
+
+.accordion-body {
+    background-color: #1E1E1E;
+    color: #E0E0E0;
+    border-top: 1px solid #333;
+}
+.accordion-body img {
+    max-height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* General Form Control styling (dark theme) */
+.form-control {
+    background-color: #2A2A2A;
+    border: 1px solid #4A4A4A;
+    color: #FFFFFF; /* Default text color for dark inputs */
+    padding: 0.75rem 1rem; 
+}
+
+.form-control:focus {
+    background-color: #2A2A2A;
+    border-color: #D4AF37;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25); 
+}
+.form-control::placeholder { 
+    color: #777; /* Darker placeholder for dark inputs */
+    opacity: 1; 
+}
+.form-control:-ms-input-placeholder { 
+    color: #777;
+}
+.form-control::-ms-input-placeholder { 
+    color: #777;
+}
+
+
+/* Contact Form Specific Styling (light theme for inputs) */
+#contact-form {
+    background-color: #f8f9fa; /* Light background for the form itself */
+}
+#contact-form .form-label {
+    color: #212529; /* Standard dark label color */
+    font-weight: 500;
+}
+#contact-form .form-control {
+    background-color: #FFFFFF; /* White background for contact form inputs */
+    color: #000000; /* Black text for contact form inputs */
+    border: 1px solid #ced4da; /* Standard light border */
+}
+#contact-form .form-control::placeholder {
+    color: #6c757d; /* Standard placeholder color for light inputs */
+    opacity: 1;
+}
+#contact-form .form-control:-ms-input-placeholder {
+    color: #6c757d;
+}
+#contact-form .form-control::-ms-input-placeholder {
+    color: #6c757d;
+}
+#contact-form .form-control:focus {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-color: #80bdff; /* Bootstrap's default focus blue for light forms */
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Bootstrap's default focus shadow */
+}
+/* Ensure contact form specific styles take precedence */
+#contact #contact-form .btn-primary {
+    background-color: #0d6efd; /* Standard Bootstrap primary blue for light form button */
+    border-color: #0d6efd;
+    color: #FFFFFF !important; /* Override dark theme color for button text */
+}
+#contact #contact-form .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    color: #FFFFFF !important;
+}
+
+
+.btn-primary {
+    background-color: #C4A484; 
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 0.5px;
+    border-radius: 50px; 
+}
+.btn-outline-primary {
+    border-color: #C4A484;
+    color: #C4A484;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 50px;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    background-color: #D4AF37; 
+    color: #121212 !important;
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    color: #E0E0E0;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.5rem; 
+}
+
+.social-icon:hover {
+    color: #D4AF37; 
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #1A1A1A;
+    color: #A0A0A0; /* Softer footer text */
+    border-top: 1px solid #333;
+    padding: 1.5rem 0;
+}
+
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFadeIn 0.8s ease-out forwards;
+}
+
+.animated { 
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUpFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    background-color: #1E1E1E; 
+    border: 1px solid #333;
+    color: #E0E0E0;
+    border-radius: 0.5rem;
+}
+.modal-header {
+    border-bottom: 1px solid #333;
+}
+.modal-header .modal-title {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+}
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%); 
+}
+
+.culture-item.card {
+    background-color: #222; 
+}
+.culture-item .card-img-top {
+    height: 220px; 
+    object-fit: cover;
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 70vh;
+    }
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .hero-overlay p.lead {
+        font-size: 1.1rem;
+    }
+    .filter-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .filter-btn {
+        width: 80%;
+        max-width: 250px;
+        margin: 0.3rem 0;
+    }
+    .page-title {
+        font-size: 2rem;
+    }
+    .culture-item {
+        text-align: center; 
+    }
+}
+
+@media (min-width: 992px) { 
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+     .hero-overlay p.lead {
+        font-size: 1.5rem;
+    }
+}

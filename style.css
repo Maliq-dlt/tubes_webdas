@@ -1,15 +1,15 @@
 body {
-    background-color: #121212; /* Slightly darker base */
-    color: #E0E0E0; /* Softer white for text */
+    background-color: #121212;
+    color: #E0E0E0; 
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
-    padding-top: 70px; /* Adjusted for fixed navbar */
+    padding-top: 70px; 
 }
 
 .navbar {
-    background-color: rgba(20, 20, 20, 0.85); /* Darker, more transparent */
-    backdrop-filter: blur(10px); /* Stronger blur */
-    border-bottom: 1px solid #333; /* Subtle separator */
+    background-color: rgba(20, 20, 20, 0.85); 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid #333;
     transition: background-color 0.3s ease;
 }
 
@@ -21,7 +21,7 @@ body {
     transition: color 0.3s ease;
 }
 .navbar-brand {
-    font-family: 'Playfair Display', serif; /* More elegant for brand */
+    font-family: 'Playfair Display', serif; 
     font-size: 1.5rem;
 }
 
@@ -29,7 +29,7 @@ body {
 .nav-link.active, 
 .dropdown-item:hover,
 .dropdown-item.active {
-    color: #D4AF37 !important; /* Gold accent for hover/active */
+    color: #D4AF37 !important;
 }
 
 .dropdown-menu {
@@ -45,7 +45,7 @@ body {
 
 .hero-section {
     background: url('https://images.unsplash.com/photo-1547573854-74d2a71cf062?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZnJlbmNoJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
-    height: 90vh; /* Slightly less than full viewport */
+    height: 90vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +55,7 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+    background: rgba(0, 0, 0, 0.6); 
     padding: 3rem;
     border-radius: 10px;
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
@@ -73,25 +73,25 @@ body {
 }
 
 .card {
-    background-color: #1E1E1E; /* Darker card */
+    background-color: #1E1E1E; 
     border: 1px solid #333;
     color: #E0E0E0;
-    border-radius: 0.5rem; /* Rounded cards */
+    border-radius: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* For image zoom effect if desired */
+    overflow: hidden; 
 }
 
 .recipe-card:hover {
-    transform: translateY(-12px) scale(1.02); /* More pronounced hover */
-    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15); /* Subtle gold shadow */
+    transform: translateY(-12px) scale(1.02); 
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15); 
 }
 .card-img-top {
     height: 200px;
-    object-fit: cover; /* Ensures image covers space nicely */
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 .recipe-card:hover .card-img-top {
-    transform: scale(1.05); /* Slight zoom on image hover */
+    transform: scale(1.05); 
 }
 .card-title {
     font-family: 'Playfair Display', serif;
@@ -105,14 +105,14 @@ body {
 
 .filter-btn {
     background-color: transparent;
-    color: #C4A484; /* Using existing accent for consistency */
+    color: #C4A484; 
     border: 2px solid #C4A484;
     margin: 0.5rem;
     padding: 0.6rem 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    border-radius: 50px; /* Pill-shaped buttons */
+    border-radius: 50px;
 }
 
 .filter-btn:hover, .filter-btn.active-filter {
@@ -126,14 +126,14 @@ body {
 }
 
 .text-effect:hover {
-    color: #D4AF37 !important; /* Gold accent */
+    color: #D4AF37 !important; 
     transform: scale(1.03);
 }
 
 .accordion-item {
     background-color: #1E1E1E;
     border: 1px solid #333;
-    margin-bottom: 0.5rem; /* Space between items */
+    margin-bottom: 0.5rem; 
     border-radius: 0.3rem;
 }
 
@@ -221,13 +221,13 @@ body {
 }
 
 #contact #contact-form .btn-primary {
-    background-color: #0d6efd; 
-    border-color: #0d6efd;
+    background-color:#D4AF37; 
+    border-color: #D4AF37;
     color: #FFFFFF !important; 
 }
 #contact #contact-form .btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
+    background-color:#bf9e32;
+    border-color: #bf9e32;
     color: #FFFFFF !important;
 }
 

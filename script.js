@@ -78,7 +78,7 @@ function animateOnScroll() {
                 observer.unobserve(entry.target); 
             }
         });
-    }, { threshold: 0.1 }); // Adjust threshold as needed
+    }, { threshold: 0.1 }); 
 
     elements.forEach(element => observer.observe(element));
 }
@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateOnScroll();
 
-    // Handle direct modal linking from index.html to recipes.html modals
     if (window.location.hash && window.location.pathname.includes('recipes.html')) {
         const targetModalId = window.location.hash;
         const modalElement = document.querySelector(targetModalId);

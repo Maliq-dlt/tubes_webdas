@@ -11,10 +11,9 @@ function filterRecipes(category) {
 
 function setupFilters() {
     const buttons = document.querySelectorAll('.filter-btn');
-    if (buttons.length > 0) { // Ensure buttons exist on the page
+    if (buttons.length > 0) { 
         buttons.forEach(button => {
             button.addEventListener('click', () => {
-                // Active button state
                 buttons.forEach(btn => btn.classList.remove('active-filter'));
                 button.classList.add('active-filter');
                 
@@ -22,7 +21,6 @@ function setupFilters() {
                 filterRecipes(category);
             });
         });
-         // Programmatically click the "All" button on load if it exists
         const allButton = document.querySelector('.filter-btn[data-filter="all"]');
         if (allButton) {
             allButton.click();
@@ -37,7 +35,7 @@ function validateForm(event) {
     const message = document.getElementById('message');
     const formMessage = document.getElementById('form-message');
 
-    formMessage.innerHTML = ''; // Clear previous messages
+    formMessage.innerHTML = ''; 
 
     if (!name || !email || !message) {
         console.error("Form elements not found");
@@ -76,8 +74,8 @@ function animateOnScroll() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                entry.target.style.animationPlayState = 'running'; // Keep if you rely on JS for this
-                observer.unobserve(entry.target); // Optional: stop observing once animated
+                entry.target.style.animationPlayState = 'running'; 
+                observer.unobserve(entry.target); 
             }
         });
     }, { threshold: 0.1 }); // Adjust threshold as needed

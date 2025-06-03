@@ -165,11 +165,11 @@ body {
     width: 100%;
 }
 
-/* General Form Control styling (dark theme) */
+
 .form-control {
     background-color: #2A2A2A;
     border: 1px solid #4A4A4A;
-    color: #FFFFFF; /* Default text color for dark inputs */
+    color: #FFFFFF;
     padding: 0.75rem 1rem; 
 }
 
@@ -180,7 +180,7 @@ body {
     box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25); 
 }
 .form-control::placeholder { 
-    color: #777; /* Darker placeholder for dark inputs */
+    color: #777; 
     opacity: 1; 
 }
 .form-control:-ms-input-placeholder { 
@@ -191,21 +191,20 @@ body {
 }
 
 
-/* Contact Form Specific Styling (light theme for inputs) */
 #contact-form {
-    background-color: #f8f9fa; /* Light background for the form itself */
+    background-color: #f8f9fa; 
 }
 #contact-form .form-label {
-    color: #212529; /* Standard dark label color */
+    color: #212529; 
     font-weight: 500;
 }
 #contact-form .form-control {
-    background-color: #FFFFFF; /* White background for contact form inputs */
-    color: #000000; /* Black text for contact form inputs */
-    border: 1px solid #ced4da; /* Standard light border */
+    background-color: #FFFFFF; 
+    color: #000000; 
+    border: 1px solid #ced4da;
 }
 #contact-form .form-control::placeholder {
-    color: #6c757d; /* Standard placeholder color for light inputs */
+    color: #6c757d; 
     opacity: 1;
 }
 #contact-form .form-control:-ms-input-placeholder {
@@ -217,14 +216,14 @@ body {
 #contact-form .form-control:focus {
     background-color: #FFFFFF;
     color: #000000;
-    border-color: #80bdff; /* Bootstrap's default focus blue for light forms */
-    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Bootstrap's default focus shadow */
+    border-color: #80bdff; 
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); 
 }
-/* Ensure contact form specific styles take precedence */
+
 #contact #contact-form .btn-primary {
-    background-color: #0d6efd; /* Standard Bootstrap primary blue for light form button */
+    background-color: #0d6efd; 
     border-color: #0d6efd;
-    color: #FFFFFF !important; /* Override dark theme color for button text */
+    color: #FFFFFF !important; 
 }
 #contact #contact-form .btn-primary:hover {
     background-color: #0b5ed7;

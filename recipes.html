@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover traditional French recipes for appetizers, main courses, and desserts.">
+    <meta name="keywords" content="French recipes, French dishes, French cooking">
+    <meta name="author" content="French Cuisine Showcase">
+    <title>French Cuisine Showcase - Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">French Cuisine Showcase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="reciepes.html">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ingredients.html">Ingredients</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="recipes" class="py-5 animate">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 text-effect page-title">Traditional French Recipes</h2>
+            <div class="filter-list d-flex flex-wrap justify-content-center mb-4">
+                <button class="btn filter-btn active-filter" data-filter="all">All</button>
+                <button class="btn filter-btn" data-filter="appetizer">Appetizers</button>
+                <button class="btn filter-btn" data-filter="main">Main Courses</button>
+                <button class="btn filter-btn" data-filter="dessert">Desserts</button>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4" id="recipe-grid">
+                <div class="col recipe-card" data-category="main">
+                    <div class="card h-100">
+                        <img src="coq-au-vin.jpg" class="card-img-top" alt="Coq au Vin, a classic French dish">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Coq au Vin</h5>
+                            <p class="card-text">Chicken braised in red wine with mushrooms, lardons, and onions.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal1">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="dessert">
+                    <div class="card h-100">
+                        <img src="creme brulee.jpg" class="card-img-top" alt="Crème Brûlée, a classic French dessert">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Crème Brûlée</h5>
+                            <p class="card-text">Creamy custard with a caramelized sugar crust, a quintessential French dessert.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal2">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="appetizer">
+                    <div class="card h-100">
+                        <img src="french onion soup.jpg" class="card-img-top" alt="French Onion Soup, a classic starter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">French Onion Soup</h5>
+                            <p class="card-text">Rich, savory soup with caramelized onions, beef broth, topped with melted cheese and crusty bread.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal3">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="main">
+                    <div class="card h-100">
+                        <img src="Boef Bourguignon.jpg" class="card-img-top" alt="Boeuf Bour">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Boeuf Bourguignon</h5>
+                            <p class="card-text">A classic French beef stew braised in Burgundy red wine with pearl onions, mushrooms, and bacon.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal4">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="main">
+                    <div class="card h-100">
+                        <img src="Ratatouille.jpg" class="card-img-top" alt="Ratatouille, a traditional vegetable dish">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Ratatouille</h5>
+                            <p class="card-text">A vibrant Provençal vegetable stew featuring tomatoes, zucchini, eggplant, bell peppers, and herbs.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal5">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="dessert">
+                    <div class="card h-100">
+                        <img src="tarte tatin.jpg" class="card-img-top" alt="Tarte Tatin, an upside-down apple tart">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Tarte Tatin</h5>
+                            <p class="card-text">An upside-down caramelized apple tart where apples are cooked in butter and sugar before the pastry is added on top.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal6">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="appetizer">
+                    <div class="card h-100">
+                        <img src="Salade Niçoise.jpg" class="card-img-top" alt="Salade Niçoise, a classic French salad">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Salade Niçoise</h5>
+                            <p class="card-text">A refreshing salad from Nice, typically with tomatoes, hard-boiled eggs, Niçoise olives, anchovies, and tuna, dressed with olive oil.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal7">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col recipe-card" data-category="dessert">
+                    <div class="card h-100">
+                        <img src="Mousse au Chocolat.webp" class="card-img-top" alt="Mousse au Chocolat, a chocolate mousse dessert">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Mousse au Chocolat</h5>
+                            <p class="card-text">A light, airy, and intensely chocolatey dessert made with chocolate, eggs, sugar, and often cream.</p>
+                            <button class="btn btn-primary mt-auto" data-bs-toggle="modal" data-bs-target="#recipeModal8">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal1Label">Coq au Vin Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Coq-au-Vin.jpg" class="img-fluid mb-3 rounded shadow" alt="Coq au Vin dish">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>1 whole chicken (about 3 lbs), cut into 8 pieces</li>
+                        <li>750ml bottle dry red wine (like Burgundy or Pinot Noir)</li>
+                        <li>200g smoked bacon (lardons), diced</li>
+                        <li>250g cremini mushrooms, quartered or halved</li>
+                        <li>1 large onion, chopped</li>
+                        <li>2 carrots, chopped</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 tbsp all-purpose flour</li>
+                        <li>2 tbsp tomato paste</li>
+                        <li>1 bouquet garni (parsley, thyme, bay leaf)</li>
+                        <li>Olive oil & Butter</li>
+                        <li>Salt and freshly ground black pepper</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Season chicken pieces with salt and pepper.</li>
+                        <li>In a large Dutch oven, cook bacon until crisp. Remove bacon, leave fat.</li>
+                        <li>Brown chicken pieces in batches in bacon fat (add olive oil/butter if needed). Remove chicken.</li>
+                        <li>Sauté onions and carrots until softened. Add garlic and cook for 1 min.</li>
+                        <li>Stir in flour and tomato paste, cook for 1 min.</li>
+                        <li>Gradually whisk in red wine. Bring to a simmer, scraping up browned bits.</li>
+                        <li>Return chicken and bacon to the pot. Add bouquet garni.</li>
+                        <li>Cover and simmer gently for 1.5 - 2 hours, or until chicken is tender.</li>
+                        <li>Sauté mushrooms separately in butter until browned. Add to the stew in the last 15 minutes.</li>
+                        <li>Adjust seasoning. Serve hot, often with mashed potatoes or crusty bread.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal2Label">Crème Brûlée Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="creme brulee.jpg" class="img-fluid mb-3 rounded shadow" alt="Crème Brûlée dessert">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>2 cups heavy cream</li>
+                        <li>1 vanilla bean, split and scraped (or 1 tsp vanilla extract)</li>
+                        <li>5 large egg yolks</li>
+                        <li>1/2 cup granulated sugar, plus more for topping</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Preheat oven to 325°F (160°C).</li>
+                        <li>In a saucepan, heat heavy cream and vanilla bean (seeds and pod) until just simmering. Remove from heat, cover, and let steep for 15 minutes. Remove pod. (If using extract, add later).</li>
+                        <li>In a bowl, whisk egg yolks and sugar until pale and slightly thickened.</li>
+                        <li>Slowly pour the warm cream into the egg yolk mixture, whisking constantly. (Add vanilla extract now if using).</li>
+                        <li>Strain custard into a clean bowl or pitcher. Skim off any foam.</li>
+                        <li>Divide custard among 4-6 shallow ramekins. Place ramekins in a baking pan.</li>
+                        <li>Carefully pour hot water into the pan to come halfway up the sides of the ramekins (water bath).</li>
+                        <li>Bake for 30-35 minutes, or until custards are set but still slightly jiggly in the center.</li>
+                        <li>Remove ramekins from water bath, let cool, then refrigerate for at least 4 hours or overnight.</li>
+                        <li>Before serving, sprinkle an even layer of sugar on top of each custard. Caramelize with a kitchen torch until golden brown and bubbly. Let sit for a few minutes to harden.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal3Label">French Onion Soup Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="french onion soup.jpg" class="img-fluid mb-3 rounded shadow" alt="French Onion Soup">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>4 large yellow onions, thinly sliced</li>
+                        <li>3 tbsp butter</li>
+                        <li>1 tbsp olive oil</li>
+                        <li>1 tsp sugar</li>
+                        <li>1/2 cup dry white wine (optional)</li>
+                        <li>6 cups beef broth (or a mix of beef and chicken)</li>
+                        <li>1 bay leaf, 2 sprigs thyme</li>
+                        <li>Salt and freshly ground black pepper</li>
+                        <li>4-8 slices baguette, toasted</li>
+                        <li>1.5 cups grated Gruyère cheese (or a mix with Emmental)</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>In a large pot or Dutch oven, melt butter with olive oil over medium heat. Add onions and sugar. Cook slowly, stirring occasionally, for 30-45 minutes, until deeply caramelized and sweet.</li>
+                        <li>If using, deglaze the pot with white wine, scraping up any browned bits. Let it reduce for a couple of minutes.</li>
+                        <li>Add beef broth, bay leaf, and thyme. Bring to a simmer, then reduce heat and cook gently for at least 30 minutes to allow flavors to meld. Season with salt and pepper. Remove bay leaf and thyme sprigs.</li>
+                        <li>Preheat broiler. Ladle soup into oven-safe bowls.</li>
+                        <li>Top each bowl with 1-2 slices of toasted baguette.</li>
+                        <li>Generously sprinkle Gruyère cheese over the bread.</li>
+                        <li>Place bowls under the broiler for 2-3 minutes, or until cheese is melted, bubbly, and golden brown. Watch carefully to prevent burning.</li>
+                        <li>Serve immediately, but caution that it will be very hot.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal4" tabindex="-1" aria-labelledby="recipeModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal4Label">Boeuf Bourguignon Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Boef Bourguignon.jpg" class="img-fluid mb-3 rounded shadow" alt="Boeuf Bourguignon">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>3 lbs beef chuck, cut into 2-inch cubes</li>
+                        <li>1 bottle (750ml) dry red wine (like Burgundy, Pinot Noir, or Merlot)</li>
+                        <li>6 oz bacon (lardons), diced</li>
+                        <li>1 large onion, chopped</li>
+                        <li>2 carrots, sliced</li>
+                        <li>2 cloves garlic, minced</li>
+                        <li>2 tbsp all-purpose flour</li>
+                        <li>2 tbsp tomato paste</li>
+                        <li>2 cups beef broth</li>
+                        <li>1 bouquet garni (parsley, thyme, bay leaf)</li>
+                        <li>1 lb cremini mushrooms, quartered</li>
+                        <li>1 cup pearl onions, peeled</li>
+                        <li>Olive oil & Butter</li>
+                        <li>Salt and freshly ground black pepper</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Pat beef dry and season with salt and pepper.</li>
+                        <li>In a large Dutch oven, cook bacon until crisp. Remove bacon, reserve fat.</li>
+                        <li>Brown beef cubes in batches in bacon fat (add olive oil if needed). Remove beef.</li>
+                        <li>Sauté chopped onion and carrots in the same pot until softened (5-7 mins). Add garlic for 1 min.</li>
+                        <li>Stir in flour and tomato paste, cook for 1-2 minutes.</li>
+                        <li>Gradually pour in red wine, scraping up browned bits. Bring to a simmer and cook for a few minutes to reduce slightly.</li>
+                        <li>Return beef and bacon to the pot. Add beef broth and bouquet garni. Ensure liquid almost covers beef (add more broth/wine if needed).</li>
+                        <li>Bring to a simmer, then cover and either cook on low heat on stovetop for 2.5-3 hours, or in a preheated 325°F (160°C) oven for 2.5-3 hours, until beef is very tender.</li>
+                        <li>About 30 minutes before it's done, sauté mushrooms and pearl onions in a separate pan with butter until golden. Add to the stew.</li>
+                        <li>Remove bouquet garni. Skim fat if necessary. Adjust seasoning. Serve hot with mashed potatoes, egg noodles, or crusty bread.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal5" tabindex="-1" aria-labelledby="recipeModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal5Label">Ratatouille Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Ratatouille.jpg" class="img-fluid mb-3 rounded shadow" alt="Ratatouille dish">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>1 large eggplant, diced</li>
+                        <li>2 medium zucchini, diced</li>
+                        <li>2 bell peppers (any color), diced</li>
+                        <li>1 large onion, chopped</li>
+                        <li>3-4 cloves garlic, minced</li>
+                        <li>1 can (28 oz) crushed tomatoes (or 4-5 ripe tomatoes, chopped)</li>
+                        <li>2 tbsp tomato paste</li>
+                        <li>1/4 cup olive oil</li>
+                        <li>1 tsp Herbes de Provence (or mix of thyme, rosemary, oregano)</li>
+                        <li>Fresh basil and parsley, chopped, for garnish</li>
+                        <li>Salt and freshly ground black pepper</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Heat olive oil in a large pot or Dutch oven over medium heat.</li>
+                        <li>Add onion and cook until softened, about 5 minutes. Add bell peppers and cook for another 5 minutes.</li>
+                        <li>Add eggplant and zucchini. Cook, stirring occasionally, for 10-15 minutes until vegetables start to soften and lightly brown.</li>
+                        <li>Stir in garlic and cook for 1 minute until fragrant.</li>
+                        <li>Add crushed tomatoes, tomato paste, and Herbes de Provence. Season with salt and pepper.</li>
+                        <li>Bring to a simmer, then reduce heat to low, cover, and cook for at least 30-40 minutes, or until all vegetables are very tender and flavors have melded. Stir occasionally. For a thicker consistency, uncover for the last 10-15 minutes.</li>
+                        <li>Adjust seasoning if needed. Stir in fresh basil and parsley before serving.</li>
+                        <li>Ratatouille can be served hot, warm, or at room temperature. It's often even better the next day.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal6" tabindex="-1" aria-labelledby="recipeModal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal6Label">Tarte Tatin Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="tarte tatin.jpg" class="img-fluid mb-3 rounded shadow" alt="Tarte Tatin dessert">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>6-8 firm apples (like Granny Smith, Honeycrisp, or Braeburn), peeled, cored, and quartered or halved</li>
+                        <li>1 cup (200g) granulated sugar</li>
+                        <li>1/2 cup (113g) unsalted butter, cut into pieces</li>
+                        <li>1 sheet (approx. 10-14 oz) puff pastry, thawed if frozen</li>
+                        <li>Optional: pinch of cinnamon, splash of lemon juice for apples</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Preheat oven to 375°F (190°C).</li>
+                        <li>In a 9 or 10-inch oven-safe skillet (cast iron is ideal), melt butter over medium heat. Sprinkle sugar evenly over the butter. Cook, stirring occasionally, until the sugar melts and turns into an amber-colored caramel (about 5-8 minutes). Be careful not to burn it. Remove from heat.</li>
+                        <li>Arrange apple pieces tightly over the caramel in the skillet, rounded side down. Pack them in as they will shrink. (Toss apples with lemon juice/cinnamon before if desired).</li>
+                        <li>Roll out puff pastry slightly larger than your skillet. Drape it over the apples, tucking the edges down inside the pan around the apples.</li>
+                        <li>Cut a few slits in the pastry top to allow steam to escape.</li>
+                        <li>Bake for 30-40 minutes, or until the pastry is golden brown and puffed, and the caramel is bubbling around the edges.</li>
+                        <li>Let the tarte cool in the skillet for about 10-15 minutes. This is important for the caramel to set slightly but not harden too much.</li>
+                        <li>Carefully place a large serving platter (larger than the skillet) over the skillet. With oven mitts, quickly and confidently invert the tarte onto the platter. If any apples stick, gently lift them and place them back.</li>
+                        <li>Serve warm, plain or with vanilla ice cream or crème fraîche.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal7" tabindex="-1" aria-labelledby="recipeModal7Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal7Label">Salade Niçoise Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Salade Niçoise.jpg" class="img-fluid mb-3 rounded shadow" alt="Salade Niçoise">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>For the Salad:</li>
+                        <li>1 head of lettuce (Bibb, Boston, or romaine), torn</li>
+                        <li>1 lb small new potatoes, boiled or steamed until tender, halved or quartered</li>
+                        <li>1/2 lb green beans (haricots verts), blanched and refreshed</li>
+                        <li>2-3 ripe tomatoes, quartered or sliced</li>
+                        <li>1 small red onion or 2-3 shallots, thinly sliced (optional)</li>
+                        <li>1/2 cup Niçoise olives (or Kalamata)</li>
+                        <li>2-3 hard-boiled eggs, quartered</li>
+                        <li>1 can (5-7 oz) good quality tuna in oil, drained and flaked (or grilled fresh tuna)</li>
+                        <li>4-6 anchovy fillets (optional)</li>
+                        <li>For the Vinaigrette:</li>
+                        <li>1/2 cup extra virgin olive oil</li>
+                        <li>3 tbsp red wine vinegar</li>
+                        <li>1 tbsp Dijon mustard</li>
+                        <li>1 small clove garlic, minced or grated</li>
+                        <li>Salt and freshly ground black pepper</li>
+                        <li>Fresh herbs (parsley, chives, tarragon), chopped (optional)</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Prepare all salad components: cook potatoes, blanch green beans, boil eggs. Let them cool.</li>
+                        <li>Make the vinaigrette: Whisk together olive oil, red wine vinegar, Dijon mustard, and garlic. Season with salt, pepper, and fresh herbs if using.</li>
+                        <li>On a large platter or individual plates, arrange a bed of lettuce.</li>
+                        <li>Artfully arrange the potatoes, green beans, tomatoes, red onion (if using), olives, hard-boiled eggs, tuna, and anchovies (if using) over the lettuce.</li>
+                        <li>Drizzle generously with the vinaigrette just before serving.</li>
+                        <li>The salad can be composed or lightly tossed. Traditionally, it's a composed salad.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="recipeModal8" tabindex="-1" aria-labelledby="recipeModal8Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recipeModal8Label">Mousse au Chocolat Recipe</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Mousse au Chocolat.webp" class="img-fluid mb-3 rounded shadow" alt="Mousse au Chocolat dessert">
+                    <h6>Ingredients</h6>
+                    <ul>
+                        <li>7 oz (200g) good quality bittersweet chocolate (60-70% cacao), chopped</li>
+                        <li>6 large eggs, separated (yolks and whites in different bowls)</li>
+                        <li>1/4 cup (50g) granulated sugar, divided</li>
+                        <li>1/4 cup strong brewed coffee or water (optional, for melting chocolate)</li>
+                        <li>1 tsp vanilla extract</li>
+                        <li>Pinch of salt (for egg whites)</li>
+                        <li>Optional: 1/2 cup heavy cream, whipped to soft peaks for a lighter mousse (fold in at the end)</li>
+                    </ul>
+                    <h6>Instructions</h6>
+                    <ol>
+                        <li>Melt chocolate: Place chopped chocolate in a heatproof bowl. You can melt it gently in a microwave in 30-second intervals, stirring in between, or over a saucepan of simmering water (bain-marie), ensuring the bowl doesn't touch the water. If using coffee/water, add it to the chocolate while melting. Stir until smooth. Let cool slightly.</li>
+                        <li>In a medium bowl, whisk egg yolks with half of the sugar (2 tbsp) until pale and slightly fluffy. Stir in vanilla extract.</li>
+                        <li>Gently fold the slightly cooled melted chocolate into the egg yolk mixture until well combined.</li>
+                        <li>In a separate, very clean, large bowl, beat egg whites with a pinch of salt using an electric mixer until soft peaks form. Gradually add the remaining sugar (2 tbsp) and continue to beat until stiff, glossy peaks form.</li>
+                        <li>Gently fold about one-third of the beaten egg whites into the chocolate mixture to lighten it. Then, carefully fold in the remaining egg whites in two additions, being careful not to overmix and deflate the whites. The mixture should be airy and even.</li>
+                        <li>(Optional: If using whipped cream for a lighter version, gently fold it in now.)</li>
+                        <li>Spoon or pipe the mousse into individual serving dishes or glasses.</li>
+                        <li>Chill in the refrigerator for at least 3-4 hours, or preferably overnight, to set completely.</li>
+                        <li>Serve chilled, garnished with chocolate shavings, raspberries, or a dollop of whipped cream if desired.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center">
+        <p>© 2025 French Cuisine Showcase. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

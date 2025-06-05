@@ -1,3 +1,4 @@
+
 function filterRecipes(category) {
     const cards = document.querySelectorAll('.recipe-card');
     cards.forEach(card => {
@@ -11,12 +12,12 @@ function filterRecipes(category) {
 
 function setupFilters() {
     const buttons = document.querySelectorAll('.filter-btn');
-    if (buttons.length > 0) { 
+    if (buttons.length > 0) {
         buttons.forEach(button => {
             button.addEventListener('click', () => {
                 buttons.forEach(btn => btn.classList.remove('active-filter'));
                 button.classList.add('active-filter');
-                
+
                 const category = button.getAttribute('data-filter');
                 filterRecipes(category);
             });
@@ -35,7 +36,7 @@ function validateForm(event) {
     const message = document.getElementById('message');
     const formMessage = document.getElementById('form-message');
 
-    formMessage.innerHTML = ''; 
+    formMessage.innerHTML = '';
 
     if (!name || !email || !message) {
         console.error("Form elements not found");
@@ -74,11 +75,11 @@ function animateOnScroll() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                entry.target.style.animationPlayState = 'running'; 
-                observer.unobserve(entry.target); 
+                entry.target.style.animationPlayState = 'running';
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 }); 
+    }, { threshold: 0.1 });
 
     elements.forEach(element => observer.observe(element));
 }
@@ -91,13 +92,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     animateOnScroll();
 
-    if (window.location.hash && window.location.pathname.includes('recipes.html')) {
+ 
+    if (window.location.hash && window.location.pathname.includes('reciepes.html')) {
         const targetModalId = window.location.hash;
         const modalElement = document.querySelector(targetModalId);
-        if (modalElement && bootstrap.Modal) {
-            // Check if it's a Bootstrap modal before trying to show
+        if (modalElement && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
             const modal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
             modal.show();
         }
     }
+    
 });
